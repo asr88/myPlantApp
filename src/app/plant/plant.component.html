@@ -2,34 +2,26 @@
   <div class="col-6">
     <table class="table">
       <thead>
-        <tr>
-          <th class="h4">Nombre de la planta</th>
-          <th class="h4">Nombre cientifico de la planta</th>
+        <tr class="table-secondary">
+          <th class="h4">#</th>
+          <th class="h4">Nombre común</th>
           <th class="h4">Tipo</th>
-          <th class="h4">Altura máxima</th>
           <th class="h4">Clima</th>
-          <th class="h4">Sustrato siembra</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let p of plants">
           <td>
-            <dd>{{p.nombre_comun}}</dd>
+            <dd>{{p.id}}</dd>
           </td>
           <td>
-            <dd>{{p.nombre_cientifico}}</dd>
+            <dd>{{p.nombre_comun}}</dd>
           </td>
           <td>
             <dd>{{p.tipo}}</dd>
           </td>
           <td>
-            <dd>{{p.altura_maxima}}</dd>
-          </td>
-          <td>
             <dd>{{p.clima}}</dd>
-          </td>
-          <td>
-            <dd>{{p.sustrato_siembra}}</dd>
           </td>
       </tr>
       </tbody>

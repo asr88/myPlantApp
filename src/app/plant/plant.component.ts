@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Plant } from './plant';
 import { PlantService } from './plant.service';
 
 @Component({
   selector: 'app-plant',
   templateUrl: './plant.component.html',
-  styleUrls: ['./plant.component.css']
+  styleUrls: ['./plant.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PlantComponent implements OnInit {
 
