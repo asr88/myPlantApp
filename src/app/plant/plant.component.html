@@ -1,3 +1,38 @@
-<p>
-  plant works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Nombre de la planta</th>
+          <th class="h4">Nombre cientifico de la planta</th>
+          <th class="h4">Tipo</th>
+          <th class="h4">Altura máxima</th>
+          <th class="h4">Climas</th>
+          <th class="h4">Sustrato siembra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of plants">
+          <td>
+            <dd>{{p.nombre_comun}}</dd>
+          </td>
+          <td>
+            <dd>{{p.nombre_cientifico}}</dd>
+          </td>
+          <td>
+            <dd>{{p.tipo}}</dd>
+          </td>
+          <td>
+            <dd>{{p.altura_maxima}}</dd>
+          </td>
+          <td>
+            <dd>{{p.climas}}</dd>
+          </td>
+          <td>
+            <dd>{{p.sustrato_siembra}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
