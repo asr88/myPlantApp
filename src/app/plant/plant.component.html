@@ -1,30 +1,29 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr class="table-secondary">
-          <th class="h4">#</th>
-          <th class="h4">Nombre común</th>
-          <th class="h4">Tipo</th>
-          <th class="h4">Clima</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of plants">
-          <td>
-            <dd>{{p.id}}</dd>
-          </td>
-          <td>
-            <dd>{{p.nombre_comun}}</dd>
-          </td>
-          <td>
-            <dd>{{p.tipo}}</dd>
-          </td>
-          <td>
-            <dd>{{p.clima}}</dd>
-          </td>
-      </tr>
-      </tbody>
-    </table>
+<div class="container-fluid mt-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <h2 class="text-center mb-4">Lista de Plantas</h2>
+      <table class="table table-striped table-bordered">
+        <thead class="table-secondary">
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Nombre Común</th>
+            <th class="h4">Tipo</th>
+            <th class="h4">Clima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of plants">
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre_comun }}</td>
+            <td>{{ p.tipo }}</td>
+            <td>{{ p.clima }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center mt-4">
+        <p class="h5">Total Plantas de Interior: {{ contarPlantasInteriores() }}</p>
+        <p class="h5">Total Plantas de Exterior: {{ contarPlantasExteriores() }}</p>
+      </div>
+    </div>
   </div>
 </div>

@@ -23,5 +23,13 @@ export class PlantComponent implements OnInit {
       this.plants = plants;
     });
   }
+
+  contarPlantasInteriores() {
+    return this.plants.filter(planta => planta.tipo === 'Interior').length; 
+  }
+  contarPlantasExteriores() {
+    return this.plants.filter(planta => planta.tipo === 'Exterior').length; 
+  }
 }
+
 
