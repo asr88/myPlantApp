@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Plant } from './plant';
-import { dataPlants } from './dataPlants';
+import { PlantService } from './plant.service';
 
 @Component({
   selector: 'app-plant',
@@ -10,13 +10,17 @@ import { dataPlants } from './dataPlants';
 export class PlantComponent implements OnInit {
 
   plants: Array<Plant> = [];
-  constructor() { }
-  getPlantsList(): Array<Plant> {
-    return dataPlants;
-  }
+
+  constructor(private plantService: PlantService) { }
 
   ngOnInit() {
-    this.plants = this.getPlantsList();
+    this.getPlants();
   }
 
+  getPlants() {
+    this.plantService.getPlants().subscribe(plants => {
+      this.plants = plants;
+    });
+  }
 }
+
